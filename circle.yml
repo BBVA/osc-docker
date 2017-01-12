@@ -9,8 +9,11 @@ dependencies:
 
 test:
   override:
-    - docker run --name osc -t -i -d bbvalabs/osc-docker
-    - docker exec -i -t osc /bin/bash -c 'pip list --format columns | grep -i "^python-.*client"'; sleep 10
+    - >
+      if [ $(docker run -t -i bbvalabs/osc-docker pip list --format columns | awk '/ceilometer|cinder|designate|glance|heat|keystone|magnum|neutron|nova|openstack|sahara|swift|trove/{ print $1 }' | wc -l) != 3 ]; then
+       exit -1;
+      fi
+    - docker run -t -i bbvalabs/osc-docker pip list --format columns | grep
 
 deployment:
   hub:
