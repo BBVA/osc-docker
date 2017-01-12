@@ -16,7 +16,7 @@ Now run a docker container using this image (build it locally or download from d
 the container is ready then you will can use any python client :
 
 
-New example shows you how run the container
+This example shows you how run the container
 
 ```bash
 $ docker run --name osc -t -d -v $(pwd)/<tenant_name>-openrc.sh:/root/<tenant_name>-openrc.sh bbvalabs/osc-docker
