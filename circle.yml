@@ -9,7 +9,7 @@ dependencies:
 
 test:
   override:
-    - docker run --name osc -t -d bbvalabs/osc-docker
+    - docker run --name osc -t -i -d bbvalabs/osc-docker
     - docker exec -i -t osc /bin/bash -c 'pip list --format columns | grep -i "^python-.*client"'; sleep 10
 
 deployment:
