@@ -20,7 +20,7 @@ the container is ready then you will can use any python client :
 
 This example shows you how to run the container
 
-```bash
+```sh
 $ docker run --name osc -t -d -v $(pwd)/<tenant_name>-openrc.sh:/root/<tenant_name>-openrc.sh bbvalabs/osc-docker
 $ docker exec -i -t osc /bin/bash
 root@956e32fec408:~# source <tenant_name>-openrc.sh
