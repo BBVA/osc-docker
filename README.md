@@ -21,12 +21,12 @@ the container is ready then you will can use any python client (a bunch of servi
 This example shows you how to run the container:
 
 ```sh
-$ docker run --name osc -t -d -v $(pwd)/<tenant_name>-openrc.sh:/root/<tenant_name>-openrc.sh bbvalabs/osc-docker
-$ docker exec -i -t osc /bin/bash
-root@956e32fec408:~# source <tenant_name>-openrc.sh
+$ docker run --name osc -it -d -v $(pwd)/<tenant_name>-openrc.sh:/root/<tenant_name>-openrc.sh bbvalabs/osc-docker
+$ docker attach osc
+~ # source <tenant_name>-openrc.sh
 Please enter your OpenStack Password:
 ...type your password...
-root@e03f27d23fd3:~# nova list
+~ # nova list
 +--------------------------------------+-------------------------------------------------------+--------+------------+-------------+----------------------------------------------+
 | ID                                   | Name                                                  | Status | Task State | Power State | Networks                                     |
 +--------------------------------------+-------------------------------------------------------+--------+------------+-------------+----------------------------------------------+
@@ -39,7 +39,7 @@ root@e03f27d23fd3:~# nova list
 | d69d72f2-d223-4035-9307-2de4e9cd2f90 | ba-ehcgrojgifce-6-z2bhquna5dfe-kube_node-rgrkwyabt6qn | ACTIVE | -          | Running     | Subnet Template 0=10.79.118.36               |
 | 3468b91d-6ba0-46c8-8278-355b19db7016 | bay-k8s-czy4er4pucir-kube_master-oqhdsyhcopei         | ACTIVE | -          | Running     | Subnet Template 0=10.79.118.29, 185.24.5.220 |
 +--------------------------------------+-------------------------------------------------------+--------+------------+-------------+----------------------------------------------+
-root@e03f27d23fd3:~# magnum bay-list
+~ # magnum bay-list
 +--------------------------------------+---------+------------+-----------------+
 | uuid                                 | name    | node_count | status          |
 +--------------------------------------+---------+------------+-----------------+
