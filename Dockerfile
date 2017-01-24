@@ -1,6 +1,6 @@
 FROM python:2.7-alpine
 MAINTAINER BBVALabs
-LABEL authors="engapa@bbva.com, laetitialaetitiae@gmail.com"
+LABEL authors="engapa@gmail.com, leti.garcia.martin@gmail.com"
 
 WORKDIR /root
 

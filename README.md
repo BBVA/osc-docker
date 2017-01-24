@@ -15,7 +15,7 @@ https://dashboard.cloud.bbva.com/dashboard/project/access_and_security/api_acces
 > WARNING: If you have more than one tenant/project in Openstack then you should login in our Openstack dashboard and select the desired tenant,
 > otherwise the downloaded credentials belong to default tenant.
 
-Now run a docker container using this image (build it locally or download from dockerhub.com: ***bbvalabs/osc-docker***) and the downloaded credentials file (<tenant_name>-openrc.sh`), when
+Now run a docker container using this image (build it locally or download from dockerhub.com: ***bbvalabs/osc-docker***) and the downloaded credentials file ( ***<tenant_name>-openrc.sh*** ), when
 the container is ready then you will can use any python client (a bunch of services and for kilo version, up to now)
 
 This example shows you how to run the container:
