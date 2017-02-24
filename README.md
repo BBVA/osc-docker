@@ -10,7 +10,7 @@ Docker container for Openstack clients
 
 First of all, you need to get your Openstack credentials at :
 
-https://dashboard.cloud.bbva.com/dashboard/project/access_and_security/api_access/venvreqs/
+https://dashboard.cloud.bbva.com/dashboard/project/access_and_security/api_access/openrc/
 
 > WARNING: If you have more than one tenant/project in Openstack then you should login in our Openstack dashboard and select the desired tenant,
 > otherwise the downloaded credentials belong to default tenant.
