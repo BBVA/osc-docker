@@ -1,1 +1,1 @@
-# Define upper version of dependencies. On this way we could the version of transitive dependencies too.
+# Define upper version of dependencies. On this way we could manage the version of transitive dependencies too.
