@@ -22,7 +22,7 @@ after_success:
 - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 - docker push bbvalabs/osc-docker:${OSTACK_VERSION}
 - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker build --no-cache -t engapa/osc-docker:latest;
+    docker build --no-cache -t bbvalabs/osc-docker:latest;
     docker push bbvalabs/osc-docker:latest
   fi
 
