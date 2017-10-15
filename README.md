@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/BBVA/osc-docker/tree/eurocloud.svg?style=svg)](https://circleci.com/gh/BBVA/osc-docker/tree/eurocloud)
+[![Build Status](https://travis-ci.org/BBVA/osc-docker.svg?branch=master)](https://travis-ci.org/BBVA/osc-docker)
 [![Docker Pulls](https://img.shields.io/docker/pulls/bbvalabs/osc-docker.svg)](https://hub.docker.com/r/bbvalabs/osc-docker/)
 [![Docker Stars](https://img.shields.io/docker/stars/bbvalabs/osc-docker.svg)](https://hub.docker.com/r/bbvalabs/osc-docker/)
 [![Docker Layering](https://images.microbadger.com/badges/image/bbvalabs/osc-docker.svg)](https://microbadger.com/images/bbvalabs/osc-docker)

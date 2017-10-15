@@ -1,0 +1,31 @@
+language: bash
+
+env:
+  OSTACK_VERSION: "eurocloud"
+
+services:
+- docker
+
+before_install:
+- docker build --no-cache -t bbvalabs/osc-docker:${OSTACK_VERSION} .
+
+install:
+- docker run -it -d --name osc bbvalabs/osc-docker:${OSTACK_VERSION}
+
+script:
+- >
+  if [ $(docker exec -it osc pip list --format columns | awk '/ceilometer|cinder|designate|glance|heat|keystone|magnum|neutron|nova|openstack|sahara|swift|trove/{ print $1 }' | wc -l) != 13 ]; then
+    exit -1;
+  fi
+
+after_success:
+- docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- docker push bbvalabs/osc-docker:${OSTACK_VERSION}
+- if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker build --no-cache -t engapa/osc-docker:latest;
+    docker push bbvalabs/osc-docker:latest
+  fi
+
+after_script:
+- docker stop osc
+- docker rm osc
