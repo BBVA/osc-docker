@@ -23,7 +23,7 @@ after_success:
 - docker push bbvalabs/osc-docker:${OSTACK_VERSION}
 - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker build --no-cache -t bbvalabs/osc-docker:latest;
-    docker push bbvalabs/osc-docker:latest
+    docker push bbvalabs/osc-docker:latest;
   fi
 
 after_script:
